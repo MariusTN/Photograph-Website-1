@@ -33,6 +33,7 @@ $special-color: #906272;
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -102,6 +103,7 @@ nav {
 
 #logo {
     flex: 1 1 20rem;
+    z-index: 2;
 }
 
 .nav-links {
@@ -405,6 +407,8 @@ footer h4 {
 
     .burger {
         cursor: pointer;
+        position: relative;
+        display: block;
     }
 
     .burger span {
@@ -421,7 +425,10 @@ footer h4 {
 
     .toggle .line1 {
         transform: rotateZ(45deg) translateY(300%);
-        background: white;
+        background: $special-color;
+        z-index: 2;
+        position: sticky;
+        top: 0%;
     }
 
     .toggle .line2 {
@@ -430,7 +437,10 @@ footer h4 {
 
     .toggle .line3 {
         transform: rotateZ(-45deg) translateY(-300%);
-        background: white;
+        background: $special-color;
+        z-index: 2;
+        position: sticky;
+        top: 0%;
     }
 
     //nav stuff
@@ -442,16 +452,22 @@ footer h4 {
     }
 
     .nav-links {
-        background: $background-color;
+        font-family: "Ruhl Medium";
+        text-transform: uppercase;
+
+        background: #906272;
+
         width: 100%;
-        height: 100%;
+        height: 40rem;
         position: fixed;
 
-        top: 0;
+        right: 40rem;
+        top: 7rem;
         left: 100%;
 
         flex-direction: column;
         align-items: center;
+        z-index: 1;
     }
 
     //gallery stuff for responsive stuff
