@@ -2,6 +2,7 @@ $header1: calc(2rem + 1vw);
 $header2: calc(3.5rem + 1vw);
 $header3: calc(3rem + 1vw);
 $header4: calc(2.4rem + 1vw);
+$header5: calc(2.6rem + 1vw);
 $text: calc(1.5rem + 1vw);
 $big: calc(2.4rem + 1vw);
 
@@ -169,7 +170,7 @@ nav {
     left: -20%;
     z-index: -1;
     animation: plant-entrance 2.5s ease-in-out 0.5 forwards,
-    plant-shake 2.5s infinite ease-in-out alternate-reverse;
+        plant-shake 2.5s infinite ease-in-out alternate-reverse;
     transform-origin: bottom;
 }
 
@@ -177,7 +178,70 @@ nav {
     left: 40%;
 }
 
-// Animation
+// About Section
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about h3 {
+    text-align: center;
+    letter-spacing: 1.2rem;
+}
+
+.about-text {
+    color: white;
+    background: $background-color;
+    flex: 2 1 40rem;
+    justify-content: space-around;
+}
+
+.about-text div {
+    padding: 3rem 8rem;
+}
+
+.about-text h3 {
+    padding: 2rem 0rem;
+    font-family: "Ruhl Medium";
+}
+
+.about-text h2 {
+    font-family: "Vibes";
+    padding: 4rem;
+    text-align: center;
+}
+
+.about-image {
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+.about-image h5 {
+    position: absolute;
+    letter-spacing: 3rem;
+    text-transform: uppercase;
+    font-family: "Ruhl Medium";
+    top: 20%;
+    left: 50%;
+    font-size: $header5;
+    transform: translate(-50%, -20%);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-contact p {
+    text-align: center;
+}
+
+//gallery
+
+
+// Animations
 
 @keyframes opening {
     from {
@@ -211,25 +275,32 @@ nav {
 
 // Tablet resolution
 
-@media screen and (max-width: 844px){
-    
+@media screen and (max-width: 850px) {
+
     // Small responsive parts
     .hero {
         width: 100%;
     }
 
-    .hero-introduction{
+    .hero-introduction {
         padding: 5rem 3rem;
     }
 
-    .burger span{
+    //burger
+
+    .burger {
+        cursor: pointer;
+    }
+
+    .burger span {
         margin: 0.5rem 0rem;
         padding: 0.2rem 2rem;
         background: $gray-text;
         display: block;
+
     }
 
-    .nav-links a{
+    .nav-links a {
         color: white;
         font-size: $header3;
         text-decoration: underline;
